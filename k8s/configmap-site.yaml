@@ -1,1 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: static-site-html
+  namespace: static-site-demo
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="ar"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1" /><title>موقعي البسيط</title></head><body><h1>مرحبا من ConfigMap</h1><p>هذه الصفحة مقدمة من ConfigMap في Kubernetes.</p><p><a href="/about.html">حول</a></p></body></html>
+  about.html: |
+    <!doctype html><html lang="ar"><head><meta charset="utf-8"/><title>حول</title></head><body><h1>حول</h1><p>صفحة تجريبية.</p><p><a href="/">العودة</a></p></body></html>
 
